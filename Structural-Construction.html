@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Interior Design - KRISBUILD</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Montserrat',sans-serif;
+background:#23230f;
+color:#fff;
+overflow-x:hidden;
+
+}
+
+:root{
+
+--green:#7ac143;
+--green-dark:#5b9828;
+--black:#0b0b0b;
+--card:#151515;
+--border:rgba(255,255,255,.08);
+--text:#d9d9d9;
+
+}
+
+a{
+text-decoration:none;
+color:#fff;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+section{
+
+padding:90px 8%;
+
+}
+
+/*========================
+HEADER
+=========================*/
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(15px);
+z-index:999;
+
+}
+
+.logo{
+    font-family:'Cormorant Garamond', serif;
+    font-size:38px;
+    font-weight:1000;   /* Bold */
+    letter-spacing:1px;
+    color:#fff;
+    display:flex;
+    align-items:flex-end;
+    gap:0; /* gap hata do */
+}
+
+.kris{
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
+    color:#fff;
+    font-style:italic;
+    font-weight:1000;
+}
+
+.build{
+    position:relative;
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
+    color:var(--green);
+    font-style:italic;
+    font-weight:1000;
+}
+
+.tagline{
+    position:absolute;
+    bottom:75%;
+    left:10px;
+    margin-bottom:1px;
+
+    font-size:6px;
+    letter-spacing:1.5px;
+    color:#fff;
+    white-space:nowrap;
+}
+
+
+nav{
+
+display:flex;
+gap:35px;
+
+}
+
+nav a{
+
+font-size:15px;
+transition:.4s;
+
+}
+
+nav a:hover{
+
+color:var(--green);
+
+}
+
+/*========================
+HERO
+=========================*/
+
+.hero{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100%;
+    height:100%;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+    object-position:center;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.60);
+}
+
+.hero-content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    width:90%;
+    max-width:900px;
+    z-index:2;
+}
+
+.hero-content h1{
+
+font-family:'Cormorant Garamond',serif;
+font-size:72px;
+color:var(--green);
+margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+line-height:1.9;
+color:#ddd;
+margin-bottom:40px;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+padding:15px 42px;
+background:var(--green);
+border-radius:50px;
+font-weight:600;
+transition:.4s;
+
+}
+
+.hero-btn:hover{
+
+background:var(--green-dark);
+transform:translateY(-5px);
+
+}
+/*========================
+SECTION TITLE
+=========================*/
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-family:'Cormorant Garamond',serif;
+font-size:52px;
+color:var(--green);
+margin-bottom:15px;
+}
+
+.section-title p{
+color:#bdbdbd;
+font-size:17px;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
+
+/*========================
+CATEGORY FILTER
+=========================*/
+
+.filter-buttons{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:60px;
+
+}
+
+.filter-buttons button{
+
+padding:14px 28px;
+border:none;
+border-radius:40px;
+background:#1b1b1b;
+color:#fff;
+font-size:15px;
+cursor:pointer;
+transition:.4s;
+
+}
+
+.filter-buttons button:hover,
+.filter-buttons button.active{
+
+background:var(--green);
+
+}
+
+/*========================
+PROJECT GRID
+=========================*/
+
+.project-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:35px;
+
+}
+
+.project-card{
+
+background:var(--card);
+border-radius:20px;
+overflow:hidden;
+border:1px solid var(--border);
+transition:.45s;
+
+}
+
+.project-card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(122,193,67,.18);
+
+}
+
+/*========================
+PROJECT VIDEO
+=========================*/
+
+.project-image{
+
+position:relative;
+height:260px;
+overflow:hidden;
+cursor:pointer;
+
+}
+
+.project-image video{
+
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:.6s;
+
+}
+
+.project-card:hover video{
+
+transform:scale(1.05);
+
+}
+
+/* Premium Play Button */
+
+.play-btn{
+
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:72px;
+height:72px;
+border-radius:50%;
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+color:#fff;
+transition:.35s;
+pointer-events:none;
+
+}
+
+.project-card:hover .play-btn{
+
+background:#7ac143;
+transform:translate(-50%,-50%) scale(1.1);
+
+}
+
+.project-image.playing .play-btn{
+
+opacity:0;
+
+}
+
+/*========================
+PROJECT CONTENT
+=========================*/
+
+.project-content{
+
+padding:25px;
+
+}
+
+.project-content h3{
+
+font-family:'Cormorant Garamond',serif;
+font-size:32px;
+color:var(--green);
+margin-bottom:12px;
+
+}
+
+.project-content p{
+
+font-size:15px;
+line-height:1.9;
+color:#d5d5d5;
+margin-bottom:20px;
+
+}
+
+.project-info{
+
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:20px;
+
+}
+
+.project-info span{
+
+font-size:14px;
+color:#aaaaaa;
+
+}
+
+.project-btn{
+
+display:inline-block;
+padding:13px 30px;
+border:2px solid var(--green);
+border-radius:40px;
+transition:.4s;
+
+}
+
+.project-btn:hover{
+
+background:var(--green);
+
+}
+/*==========================
+CTA SECTION
+==========================*/
+
+.cta{
+
+padding:100px 8%;
+text-align:center;
+background:linear-gradient(135deg,#111,#181818);
+
+}
+
+.cta h2{
+
+font-family:'Cormorant Garamond',serif;
+font-size:55px;
+color:var(--green);
+margin-bottom:20px;
+
+}
+
+.cta p{
+
+max-width:750px;
+margin:auto;
+color:#cfcfcf;
+line-height:1.9;
+margin-bottom:35px;
+
+}
+
+.cta a{
+
+display:inline-block;
+padding:16px 42px;
+background:var(--green);
+color:#fff;
+border-radius:50px;
+font-weight:600;
+transition:.4s;
+
+}
+
+.cta a:hover{
+
+background:var(--green-dark);
+transform:translateY(-4px);
+
+}
+/*=========================
+FOOTER
+=========================*/
+
+.footer{
+background:#080808;
+padding:80px 8% 30px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.footer-box h3{
+font-family:'Cormorant Garamond',serif;
+font-size:30px;
+color:#7ac143;
+margin-bottom:20px;
+}
+
+.footer-box p,
+.footer-box li{
+list-style:none;
+color:#cfcfcf;
+line-height:1.8;
+margin-bottom:10px;
+}
+
+.footer-box a{
+color:#cfcfcf;
+transition:.3s;
+}
+
+.footer-box a:hover{
+color:#7ac143;
+}
+
+.footer-bottom{
+margin-top:40px;
+padding-top:20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+color:#999;
+}
+
+/*=========================
+WHATSAPP BUTTON
+=========================*/
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+width:60px;
+height:60px;
+background:#25D366;
+color:#fff;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+z-index:9999;
+transition:.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:991px){
+
+.hero-content h1{
+
+font-size:52px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+
+font-size:40px;
+
+}
+
+.hero-content p{
+
+font-size:16px;
+
+}
+
+.section-title h2{
+
+font-size:38px;
+
+}
+
+.project-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!--=========================
+HEADER
+==========================-->
+
+<header>
+
+ <a href="#" class="logo">
+    <span class="kris">KRIS</span>
+    <span class="build">BUILD
+        <span class="tagline">DESIGN & CONSTRUCTION</span>
+    </span>
+</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="index.html#services">Services</a>
+
+<a href="index.html#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<!--=========================
+HERO SECTION
+==========================-->
+
+<section class="hero">
+
+<video autoplay muted loop playsinline>
+
+<source src="hero-animation.mp4" type="video/mp4">
+
+</video>
+
+<div class="hero-content">
+
+<h1>Luxury Interior Design</h1>
+
+<p>
+Premium interior design solutions with modern concepts,
+luxury materials, space planning and elegant finishes
+that transform your dream home into a beautiful living space.
+</p>
+
+<a href="#projects" class="hero-btn">
+
+View Projects
+
+</a>
+
+</div>
+
+</section>
+
+<!--=========================
+PROJECT SECTION
+==========================-->
+
+<section id="projects">
+
+<div class="section-title">
+<h2>Our Interior Portfolio</h2>
+
+<p>
+Luxury living rooms, modular kitchens,
+bedrooms, false ceilings, TV units,
+wardrobes and premium interior solutions.
+</p>
+
+</div>
+
+<div class="filter-buttons">
+
+<button class="active">All</button>
+<button>Living Room</button>
+<button>Bedroom</button>
+<button>Kitchen</button>
+<button>Office</button>
+
+</div>
+
+<div class="project-grid">
+   <!--=========================
+PROJECT CARD 01
+==========================-->
+
+<div class="project-card" data-category="villa">
+
+<div class="project-image">
+
+    <video controls preload="metadata">
+
+        <source src="hero-animation.mp4" type="video/mp4">
+
+    </video>
+
+</div>
+
+<div class="project-content">
+
+<h3>Luxury Living Room</h3>
+
+<p>
+Premium sofa setup, false ceiling,
+designer wall panels, TV unit and luxury lighting.
+</p>
+
+<div class="project-info">
+
+<span><i class="fa-solid fa-location-dot"></i> Berhampur</span>
+
+<span><i class="fa-solid fa-ruler-combined"></i> 3200 Sq.ft</span>
+
+</div>
+
+<a href="villa-project-1.html" class="project-btn">
+View Project
+</a>
+
+</div>
+
+</div>
+
+<!--=========================
+PROJECT CARD 02
+==========================-->
+
+<div class="project-card" data-category="duplex">
+
+<div class="project-image">
+
+    <video controls preload="metadata">
+
+        <source src="hero-animation.mp4" type="video/mp4">
+
+    </video>
+
+</div>
+
+<div class="project-content">
+
+<h3>Modern Duplex</h3>
+
+<p>
+Premium duplex residence featuring
+clean lines, wooden textures,
+glass balcony and luxury lighting.
+</p>
+
+<div class="project-info">
+
+<span><i class="fa-solid fa-location-dot"></i> Bhubaneswar</span>
+
+<span><i class="fa-solid fa-ruler-combined"></i> 2800 Sq.ft</span>
+
+</div>
+
+<a href="duplex-project-1.html" class="project-btn">
+View Project
+</a>
+
+</div>
+
+</div>
+
+<!--=========================
+PROJECT CARD 03
+==========================-->
+
+<div class="project-card" data-category="commercial">
+<div class="project-image">
+
+    <video controls preload="metadata">
+
+        <source src="hero-animation.mp4" type="video/mp4">
+
+    </video>
+
+</div>
+
+<div class="project-content">
+
+<h3>Commercial Building</h3>
+
+<p>
+Modern commercial office building
+with premium glass facade,
+LED lighting and elegant front elevation.
+</p>
+
+<div class="project-info">
+
+<span><i class="fa-solid fa-location-dot"></i> Cuttack</span>
+
+<span><i class="fa-solid fa-ruler-combined"></i> 5000 Sq.ft</span>
+
+</div>
+
+<a href="commercial-project-1.html" class="project-btn">
+View Project
+</a>
+
+</div>
+
+</div> 
+<!--=========================
+PROJECT CARD 04
+==========================-->
+
+<div class="project-card" data-category="bungalow">
+
+    <div class="project-image">
+
+    <video controls preload="metadata">
+
+        <source src="hero-animation.mp4" type="video/mp4">
+
+    </video>
+
+</div>
+
+    <div class="project-content">
+
+        <h3>Contemporary Residence</h3>
+
+        <p>
+        Elegant contemporary home featuring
+        modern façade, wooden cladding,
+        decorative lighting and premium entrance.
+        </p>
+
+        <div class="project-info">
+            <span><i class="fa-solid fa-location-dot"></i> Berhampur</span>
+            <span><i class="fa-solid fa-ruler-combined"></i> 2500 Sq.ft</span>
+        </div>
+
+        <a href="contemporary-project.html" class="project-btn">
+            View Project
+        </a>
+
+    </div>
+
+</div>
+
+<!--=========================
+PROJECT CARD 05
+==========================-->
+
+<div class="project-card">
+
+    <div class="project-image">
+
+    <video controls preload="metadata">
+
+        <source src="hero-animation.mp4" type="video/mp4">
+
+    </video>
+
+</div>
+
+    <div class="project-content">
+
+        <h3>Luxury Bungalow</h3>
+
+        <p>
+        Premium bungalow with grand entrance,
+        landscaped garden, elegant compound wall
+        and luxury exterior lighting.
+        </p>
+
+        <div class="project-info">
+            <span><i class="fa-solid fa-location-dot"></i> Gopalpur</span>
+            <span><i class="fa-solid fa-ruler-combined"></i> 4100 Sq.ft</span>
+        </div>
+
+        <a href="bungalow-project.html" class="project-btn">
+            View Project
+        </a>
+
+    </div>
+
+</div>
+
+<!--=========================
+PROJECT CARD 06
+==========================-->
+
+<div class="project-card">
+
+    <div class="project-image">
+
+    <video controls preload="metadata">
+
+        <source src="hero-animation.mp4" type="video/mp4">
+
+    </video>
+
+</div>
+
+    <div class="project-content">
+
+        <h3>Modern Farm House</h3>
+
+        <p>
+        Luxury farmhouse with spacious lawn,
+        modern elevation, outdoor seating,
+        natural landscaping and warm lighting.
+        </p>
+
+        <div class="project-info">
+            <span><i class="fa-solid fa-location-dot"></i> Odisha</span>
+            <span><i class="fa-solid fa-ruler-combined"></i> 6000 Sq.ft</span>
+        </div>
+
+        <a href="farmhouse-project.html" class="project-btn">
+            View Project
+        </a>
+
+    </div>
+
+</div>
+<!--=========================================
+        PROJECT CARD 07
+==========================================-->
+
+<div class="project-card">
+
+   <div class="project-image">
+
+    <video controls preload="metadata">
+
+        <source src="hero-animation.mp4" type="video/mp4">
+
+    </video>
+
+</div>
+
+    <div class="project-content">
+
+        <h3>Luxury Apartment</h3>
+
+        <p>
+            Premium apartment elevation with modern façade,
+            glass balcony, decorative lighting and elegant architecture.
+        </p>
+
+        <div class="project-info">
+
+            <span><i class="fa-solid fa-location-dot"></i> Bhubaneswar</span>
+
+            <span><i class="fa-solid fa-ruler-combined"></i> 8500 Sq.ft</span>
+
+        </div>
+
+        <a href="apartment-project.html" class="project-btn">
+            View Project
+        </a>
+
+    </div>
+
+</div>
+
+<!--=========================================
+        PROJECT CARD 08
+==========================================-->
+
+<div class="project-card">
+
+   <div class="project-image">
+
+    <video controls preload="metadata">
+
+        <source src="hero-animation.mp4" type="video/mp4">
+
+    </video>
+
+</div>
+
+    <div class="project-content">
+
+        <h3>Luxury Resort</h3>
+
+        <p>
+            Modern resort design with water features,
+            landscape lighting, premium entrance
+            and elegant outdoor architecture.
+        </p>
+
+        <div class="project-info">
+
+            <span><i class="fa-solid fa-location-dot"></i> Puri</span>
+
+            <span><i class="fa-solid fa-ruler-combined"></i> 12000 Sq.ft</span>
+
+        </div>
+
+        <a href="resort-project.html" class="project-btn">
+            View Project
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+<!--=========================================
+        NEXT SECTION STARTS HERE
+==========================================-->
+
+<section class="cta">
+
+    <div class="section-title">
+
+        <h2>Build Your Dream Exterior</h2>
+
+        <p>
+            KRISBUILD creates elegant, premium and modern exterior
+            designs tailored to your vision. Let's transform your
+            dream into reality.
+        </p>
+
+    </div>
+
+    <a href="index.html#contact" class="hero-btn">
+        Start Your Project
+    </a>
+
+</section>
+<!--=========================================
+        FOOTER
+==========================================-->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Company -->
+        <div class="footer-box">
+
+            <h3>KRISBUILD</h3>
+
+            <p>
+                Premium Architecture, Interior & Construction Company
+                delivering luxury residential and commercial projects
+                with modern design and quality craftsmanship.
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- Services -->
+        <div class="footer-box">
+
+            <h3>Our Services</h3>
+
+            <ul>
+
+                <li>Exterior Design</li>
+                <li>Interior Design</li>
+                <li>Construction</li>
+                <li>Renovation</li>
+                <li>Landscape Design</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-box">
+
+            <h3>Contact</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Berhampur, Odisha
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+919114875064">+91 9114875064</a>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:krisbuild.od@gmail.com">
+                    krisbuild.od@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+    </div> <!-- footer-container END -->
+
+    <div class="footer-bottom">
+
+        <p>© 2026 <strong>KRISBUILD</strong>. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+
+<!--=========================================
+      WHATSAPP FLOATING BUTTON
+==========================================-->
+
+<a href="https://wa.me/919114875064"
+   class="whatsapp"
+   target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+// Active Filter Button
+const filterButtons = document.querySelectorAll(".filter-buttons button");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filter = button.textContent.trim().toLowerCase();
+
+        projectCards.forEach(card => {
+
+            const category = card.dataset.category;
+
+            if (filter === "all" || category === filter) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
+
+// Smooth Fade Animation
+
+const cards = document.querySelectorAll(".project-card");
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+card.style.transform="translateY(60px)";
+card.style.transition=".8s";
+
+observer.observe(card);
+
+});
+
+
+// Header Background
+
+window.addEventListener("scroll",()=>{
+
+const header=document.querySelector("header");
+
+if(window.scrollY>80){
+
+header.style.background="rgba(0,0,0,.92)";
+
+}else{
+
+header.style.background="rgba(0,0,0,.45)";
+
+}
+
+});
+
+
+// Smooth Scroll
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+});
+
+});
+
+</script>
+
+</body>
+
+</html>
