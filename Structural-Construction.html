@@ -607,35 +607,42 @@ grid-template-columns:1fr;
 @media (max-width:768px){
 
   .hero{
-    height:42vh;
+    height:auto;
+    min-height:38vh;
     background:#000;
   }
 
   .hero video{
     width:100%;
-    height:42vh;
+    height:auto;
+    display:block;
     object-fit:contain;
-    object-position:center;
   }
 
   .hero-content{
     width:92%;
-    top:55%;
+    top:52%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
   }
 
   .hero-content h1{
     font-size:26px;
     line-height:1.2;
+    margin-bottom:8px;
   }
 
   .hero-content p{
     font-size:12px;
     line-height:1.6;
+    margin-bottom:12px;
   }
 
   .hero-btn{
-    padding:10px 22px;
+    padding:8px 18px;
     font-size:12px;
+    border-radius:28px;
   }
 
 }
