@@ -600,45 +600,42 @@ grid-template-columns:1fr;
 
 }
 
-/*==========================*
- * MOBILE RESPONSIVE - HERO VIDEO
- *==========================*/
+/*========================================
+  MOBILE RESPONSIVE - HERO VIDEO
+========================================*/
 
 @media (max-width:768px){
 
-  /* Hero section height for mobile */
   .hero{
-    height:50vh;
+    height:42vh;
+    background:#000;
   }
 
-  /* Hero video height for mobile */
   .hero video{
-    height:50vh;
-    object-fit:cover;
+    width:100%;
+    height:42vh;
+    object-fit:contain;
+    object-position:center;
   }
 
-  /* Hero content width */
   .hero-content{
     width:92%;
+    top:55%;
   }
 
-  /* Hero heading for mobile */
   .hero-content h1{
-    margin-top:6vh;
-    font-size:32px;
+    font-size:26px;
     line-height:1.2;
   }
 
-  /* Hero paragraph for mobile */
   .hero-content p{
-    font-size:14px;
+    font-size:12px;
     line-height:1.6;
   }
 
-  /* Hero button for mobile */
   .hero-btn{
     padding:10px 22px;
-    font-size:13px;
+    font-size:12px;
   }
 
 }
